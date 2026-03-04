@@ -99,4 +99,4 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 # Vuforia
-*vuforia.engine-11.4.4.tgz
+*.vuforia.engine-11.4.4.tgz

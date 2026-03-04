@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="whirlipedebw" size="0.063000 0.090853" />
+    <ImageTarget name="serperiorbw" size="0.063000 0.087289" />
+    <ImageTarget name="scolipedebwep" size="0.063000 0.092055" />
+    <ImageTarget name="raichu" size="0.063000 0.089097" />
+    <ImageTarget name="pikachugs" size="0.063000 0.088479" />
+    <ImageTarget name="Steelix" size="0.063000 0.087699" />
+    <ImageTarget name="Sizzlipede" size="0.063000 0.087524" />
+    <ImageTarget name="Donphan" size="0.063000 0.089068" />
+    <ImageTarget name="Sandslash" size="0.063000 0.088586" />
+    <ImageTarget name="Landorus" size="0.063000 0.088091" />
+    <ImageTarget name="Larvesta" size="0.063000 0.088678" />
+    <ImageTarget name="gyaradosxye" size="0.063000 0.092329" />
+  </Tracking>
+</QCARConfig>

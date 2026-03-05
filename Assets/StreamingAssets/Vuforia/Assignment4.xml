@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="psychicsve" size="0.063000 0.086601" />
+    <ImageTarget name="basicdarknessenergysve" size="0.063000 0.084887" />
+    <ImageTarget name="basicfireenergysve" size="0.063000 0.081642" />
+    <ImageTarget name="grassenergybw" size="0.063000 0.088993" />
+    <ImageTarget name="waterenergygr" size="0.063000 0.089303" />
+    <ImageTarget name="lightningenergygr" size="0.063000 0.088521" />
+    <ImageTarget name="basicfightingenergysve" size="0.063000 0.081559" />
+    <ImageTarget name="basicmetalenergysve" size="0.063000 0.084120" />
     <ImageTarget name="whirlipedebw" size="0.063000 0.090853" />
     <ImageTarget name="serperiorbw" size="0.063000 0.087289" />
     <ImageTarget name="scolipedebwep" size="0.063000 0.092055" />

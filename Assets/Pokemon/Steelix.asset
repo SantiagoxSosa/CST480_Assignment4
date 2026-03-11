@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
   pokemonName: Steelix
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
+  type: 16
+  maxHP: 200
+  currentHP: 200
   attacks:
-  - attackName: 
-    damage: 0
-    energyCost: 0
-    description: 
-  - attackName: 
-    damage: 0
-    energyCost: 0
-    description: 
-  weakness: 0
-  resistance: 0
-  retreatCost: 0
+  - attackName: Welcoming Tail
+    damage: 40
+    energyCost: 2
+    description: Whip
+  - attackName: Skull Bash
+    damage: 140
+    energyCost: 4
+    description: Bang
+  weakness: 1
+  resistance: 3
+  retreatCost: 4

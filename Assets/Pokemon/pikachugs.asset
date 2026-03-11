@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: pikachugs
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: 
+  pokemonName: pikachugs
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
-  attacks: []
-  weakness: 0
-  resistance: 0
-  retreatCost: 0
+  type: 4
+  maxHP: 60
+  currentHP: 60
+  attacks:
+  - attackName: Tail Whip
+    damage: 10
+    energyCost: 1
+    description: Whip
+  - attackName: Quick Attack
+    damage: 20
+    energyCost: 2
+    description: Attack
+  weakness: 6
+  resistance: 16
+  retreatCost: 1

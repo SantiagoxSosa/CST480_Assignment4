@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: raichu
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: 
+  pokemonName: raichu
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
-  attacks: []
-  weakness: 0
-  resistance: 0
+  type: 4
+  maxHP: 90
+  currentHP: 90
+  attacks:
+  - attackName: Iron Tail
+    damage: 30
+    energyCost: 1
+    description: Tail
+  - attackName: Thunderbolt
+    damage: 100
+    energyCost: 2
+    description: Buzz
+  weakness: 6
+  resistance: 16
   retreatCost: 0

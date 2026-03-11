@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: gyaradosxye
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: 
+  pokemonName: gyaradosxye
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
-  attacks: []
-  weakness: 0
+  type: 2
+  maxHP: 130
+  currentHP: 130
+  attacks:
+  - attackName: Bubble Beam
+    damage: 50
+    energyCost: 3
+    description: Beam
+  - attackName: Dragon Rage
+    damage: 180
+    energyCost: 4
+    description: Rage
+  weakness: 4
   resistance: 0
-  retreatCost: 0
+  retreatCost: 3

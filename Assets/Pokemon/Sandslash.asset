@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: Sandslash
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: 
+  pokemonName: Sandslash
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
-  attacks: []
-  weakness: 0
+  type: 6
+  maxHP: 120
+  currentHP: 120
+  attacks:
+  - attackName: Sand Attack
+    damage: 50
+    energyCost: 2
+    description: Sand
+  - attackName: Mud Shot
+    damage: 100
+    energyCost: 3
+    description: Mud
+  weakness: 3
   resistance: 0
-  retreatCost: 0
+  retreatCost: 1

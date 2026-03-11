@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: scollipedebwep
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: 
+  pokemonName: scollipedebwep
   cardArt: {fileID: 0}
-  type: 0
-  maxHP: 0
-  currentHP: 0
-  attacks: []
-  weakness: 0
+  type: 10
+  maxHP: 140
+  currentHP: 140
+  attacks:
+  - attackName: Toxic Claws
+    damage: 30
+    energyCost: 2
+    description: Claw
+  - attackName: Wild Horn
+    damage: 50
+    energyCost: 3
+    description: Horn
+  weakness: 10
   resistance: 0
-  retreatCost: 0
+  retreatCost: 2

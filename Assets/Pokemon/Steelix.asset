@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
   pokemonName: Steelix
   cardArt: {fileID: 0}
-  type: 16
+  type: 9
   maxHP: 200
   currentHP: 200
   attacks:

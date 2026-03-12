@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
   pokemonName: whirlpede
   cardArt: {fileID: 0}
-  type: 10
+  type: 6
   maxHP: 90
   currentHP: 90
   attacks:

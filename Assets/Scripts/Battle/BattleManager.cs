@@ -30,6 +30,33 @@ public class BattleManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        ScanPhaseManager.Instance.OnCardScanned += AddToPlayer;
+    }
+
+    private void OnDisable()
+    {
+        ScanPhaseManager.Instance.OnCardScanned -= AddToPlayer;
+    }
+
+    private void AddToPlayer(PokemonData pokemon, int player)
+    {
+        Debug.Log("Trying to add to player " + player);
+        if (player == 1)
+        {
+            playerTeam.Add(pokemon);
+        }
+        else if (player == 2)
+        {
+            opponentTeam.Add(pokemon);
+        }
+
+        if (playerTeam.Count == 3 && opponentTeam.Count == 3)
+        {
+            StartBattle();
+        }
+    }
     // Call this once both teams are loaded from AR card detection
     public void StartBattle()
     {
@@ -124,7 +151,30 @@ public class BattleManager : MonoBehaviour
 
     private void SetState(BattleState newState)
     {
+        Debug.Log("Switching State");
         currentState = newState;
-        OnStateChanged?.Invoke(newState);
+        //OnStateChanged?.Invoke(newState);
+        if (OnStateChanged != null)
+        {
+            // We get a list of every single script listening to this event
+            var subscribers = OnStateChanged.GetInvocationList();
+            foreach (var receiver in subscribers)
+            {
+                try
+                {
+                    // This will tell us exactly which script is being called
+                    Debug.Log($"PROBE: Calling {receiver.Method.Name} on GameObject: {(receiver.Target as MonoBehaviour)?.gameObject.name}");
+
+                    // Manually trigger the listener
+                    receiver.DynamicInvoke(newState);
+                }
+                catch (System.Exception e)
+                {
+                    // If a script crashes, it will be caught here instead of stopping the game
+                    Debug.LogError($"!!! GHOST FOUND !!! The script '{receiver.Target}' crashed the battle! Error: {e.InnerException}");
+                }
+            }
+        }
+        Debug.Log("--- STATE SWITCH FINISHED ---");
     }
 }

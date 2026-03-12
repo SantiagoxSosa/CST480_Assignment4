@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
   pokemonName: Sandslash
   cardArt: {fileID: 0}
-  type: 6
+  type: 5
   maxHP: 120
   currentHP: 120
   attacks:

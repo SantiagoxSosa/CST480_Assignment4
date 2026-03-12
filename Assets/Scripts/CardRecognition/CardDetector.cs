@@ -9,7 +9,12 @@ public class CardDetector : MonoBehaviour
     {
         _observer = GetComponent<ObserverBehaviour>();
         if (_observer != null)
+        {
             _observer.OnTargetStatusChanged += OnTargetStatusChanged;
+        } else
+        {
+            Debug.Log("No Observer");
+        }
     }
 
     private void OnDestroy()
@@ -24,7 +29,10 @@ public class CardDetector : MonoBehaviour
                      status.Status == Status.EXTENDED_TRACKED;
 
         if (found)
+        {
+            Debug.Log("Card found, sending to scan phase");
             ScanPhaseManager.Instance?.OnCardDetected(gameObject.name);
+        }
         else
             ScanPhaseManager.Instance?.OnCardLost(gameObject.name);
     }

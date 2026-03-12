@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a1666148554ca5a32251a3b6185e4, type: 3}
   m_Name: scollipedebwep
   m_EditorClassIdentifier: Assembly-CSharp::PokemonData
-  pokemonName: scollipedebwep
+  pokemonName: scolipedebwep
   cardArt: {fileID: 0}
-  type: 10
+  type: 6
   maxHP: 140
   currentHP: 140
   attacks:

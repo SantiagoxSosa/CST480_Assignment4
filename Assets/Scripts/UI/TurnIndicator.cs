@@ -6,7 +6,7 @@ public class TurnIndicator : MonoBehaviour
 {
     [Header("UI")]
     public TextMeshProUGUI turnText;
-    public Image indicatorImage;
+    //public Image indicatorImage;
 
     [Header("Colors")]
     public Color playerColor = Color.blue;
@@ -24,23 +24,32 @@ public class TurnIndicator : MonoBehaviour
 
     private void HandleStateChanged(BattleState state)
     {
+        if (turnText == null /* || indicatorImage == null*/)
+        {
+            Debug.LogError($"TurnIndicator on {gameObject.name} is missing UI references!");
+            return;
+        }
         switch (state)
         {
             case BattleState.PlayerTurn:
                 turnText.text = "Your Turn";
-                indicatorImage.color = playerColor;
+                //indicatorImage.color = playerColor;
+                turnText.color = playerColor;
                 break;
             case BattleState.OpponentTurn:
                 turnText.text = "Opponent's Turn";
-                indicatorImage.color = opponentColor;
+                //indicatorImage.color = opponentColor;
+                turnText.color = opponentColor;
                 break;
             case BattleState.Won:
                 turnText.text = "You Win!";
-                indicatorImage.color = playerColor;
+                //indicatorImage.color = playerColor;
+                turnText.color = playerColor;
                 break;
             case BattleState.Lost:
                 turnText.text = "You Lose!";
-                indicatorImage.color = opponentColor;
+                //indicatorImage.color = opponentColor;
+                turnText.color = opponentColor;
                 break;
         }
     }

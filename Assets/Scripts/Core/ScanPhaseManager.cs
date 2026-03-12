@@ -102,6 +102,15 @@ public class ScanPhaseManager : MonoBehaviour
             OnScanMessage?.Invoke($"{pokemon.pokemonName} is already on Player {playerNumber}'s team.");
             return;
         }
+        else if (playerNumber == 1 && player2Team.Contains(pokemon)) 
+        {
+            OnScanMessage?.Invoke($"{pokemon.pokemonName} is already on Player 2's team.");
+            return;
+        } else if (playerNumber == 2 && player1Team.Contains(pokemon))
+        {
+            OnScanMessage?.Invoke($"{pokemon.pokemonName} is already on Player 1's team.");
+            return;
+        }
 
         // Don't exceed max team size
         if (team.Count >= MAX_TEAM_SIZE)
@@ -111,7 +120,14 @@ public class ScanPhaseManager : MonoBehaviour
         }
 
         team.Add(pokemon);
+        Debug.Log("Team: " + team);
         OnCardScanned?.Invoke(pokemon, playerNumber);
+        var subscribers = OnCardScanned?.GetInvocationList();
+        Debug.Log("Subscriber count: " + subscribers.Length);
+        foreach (var subscriber in subscribers)
+        {
+            Debug.Log($"Subscriber: {subscriber.Method.Name} on {subscriber.Target}");
+        }
         OnScanMessage?.Invoke($"Player {playerNumber}: {pokemon.pokemonName} added! ({team.Count}/{MAX_TEAM_SIZE})");
 
         // Auto-advance phase when Player 1 fills their team
@@ -132,5 +148,13 @@ public class ScanPhaseManager : MonoBehaviour
     {
         currentPhase = newPhase;
         OnPhaseChanged?.Invoke(newPhase);
+        /*
+        var subscribers = OnPhaseChanged.GetInvocationList();
+        Debug.Log("Subscriber count: " + subscribers.Length);
+        foreach (var subscriber in subscribers)
+        {
+            Debug.Log($"Subscriber: {subscriber.Method.Name} on {subscriber.Target}");
+        }
+        */
     }
 }
